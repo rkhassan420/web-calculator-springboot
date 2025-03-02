@@ -7,7 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 
-@CrossOrigin(origins = "https://alicalculators.netlify.app/percentage")
+//@CrossOrigin(origins = "https://alicalculators.netlify.app/percentage")
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api/percentage")
 public class PercentageController {
