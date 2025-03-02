@@ -21,4 +21,11 @@ public class PercentageController {
         return percentageService.calculatePercentage(request.getTotalMarks(), request.getPercentage());
 
     }
+
+
+    @PostMapping("obtained")
+    public double calculateMarksObtained(@RequestBody PercentageRequest request) {
+        return percentageService.calculateMarksObtained(request.getObtainedMarks(),request.getCompleteMarks());
+
+    }
 }
