@@ -17,10 +17,8 @@ public class PercentageController {
     private PercentageService percentageService;
 
     @PostMapping("calculate")
-    public String calculatePercentage(@RequestBody PercentageRequest request ){
-
-        double result = percentageService.calculatePercentage(request.getTotalMarks(), request.getPercentage());
-        return request.getPercentage() + "% of " + request.getTotalMarks() + " = " + result;
+    public double calculatePercentage(@RequestBody PercentageRequest request) {
+        return percentageService.calculatePercentage(request.getTotalMarks(), request.getPercentage());
 
     }
 }
